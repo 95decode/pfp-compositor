@@ -1,0 +1,22 @@
+{
+  "name": "pfp-compositor",
+  "version": "1.0.0",
+  "description": "Make your own PFP NFT images",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/95decode/pfp-compositor.git"
+  },
+  "author": "95decode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/95decode/pfp-compositor/issues"
+  },
+  "homepage": "https://github.com/95decode/pfp-compositor#readme",
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
