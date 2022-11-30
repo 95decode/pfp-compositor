@@ -2,13 +2,11 @@ import sharp from "sharp";
 
 async function composite() {
     try {
-        await sharp("back.png")
+        await sharp("./src/sample/A.png")
         .composite([{
-            input: "front.png",
-            top: 50,
-            left: 50
+            input: "./src/sample/1_7.png"
         }])
-        .toFile("resulte.png")
+        .toFile("res.png")
     } catch (err) {
         console.log(err);
     }
