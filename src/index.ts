@@ -1,21 +1,18 @@
-import * as compositor from "./compositor/compositor";
-import fs from "fs";
+import * as compositor from "./compositor";
+import * as uploader from "./uploader";
 
-async function generateImage(layer: string[]) {
-    let res = "";
-    let path: string[] = [];
+async function run(layer: string[]) {
+    await compositor.generateImage(layer);
+
+    let filename: string = "";
 
     for(let i = 0; i < layer.length; i++) {
-        path[i] = `./layers/${i.toString()}/`;
-
-        for(let j = 0; j < layer[i].length; j++) {
-            await compositor.composite("./" + res, path[i] + (j+1).toString() + "_" + layer[i][j], res + layer[i][j]);
-
-            if(res != "") fs.unlinkSync(`./${res}.png`);
-
-            res = res + layer[i][j];
-        }
+        filename += layer[i];
     }
+
+    console.log("Filename : " + filename + ".png");
+
+    await uploader.upload(filename);
 }
 
-generateImage(["C", "27", "3452739492089"]);
+run(["C", "27", "3452739772089"]);
