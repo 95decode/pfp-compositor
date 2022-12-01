@@ -2,7 +2,7 @@ import { NFTStorage, File } from 'nft.storage';
 import fs from "fs";
 
 //TODO : Move to env
-const client = new NFTStorage({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQ3ZTQ2M0M2MTZiNGExMEI3RTY0MTE3Q0M3NkYzMDI5N2FERDlCMGUiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2OTg5NjkyMjE1NSwibmFtZSI6ImNvbXBvaXRvciJ9.djSzZNb15dEeEUFJrwRiPO5lUG7bo9lA1inMo1yu09M" })
+const client = new NFTStorage({ token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQ3ZTQ2M0M2MTZiNGExMEI3RTY0MTE3Q0M3NkYzMDI5N2FERDlCMGUiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY2OTkwMDA4NTc1NiwibmFtZSI6InRlc3QifQ.sbY7-RsZkwTavxnO4CzGdnwcg9cn4ZpKZqo1JPnZpz8" })
 
 export async function upload(filename: string) {
   const metadata = await client.store({
