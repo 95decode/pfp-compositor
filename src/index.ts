@@ -15,4 +15,5 @@ async function run(layer: string[]) {
     await uploader.upload(filename);
 }
 
-run(["C", "27", "3452739772089"]);
+//example
+run(["A", "27", "3452739772089"]);
